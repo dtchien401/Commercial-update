@@ -1,368 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commercial Team Master Roadmap 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
-        .section-card {
-            background-color: #ffffff;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            border: 1px solid #f1f5f9;
-            margin-bottom: 1.5rem;
-        }
-        .status-badge {
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            line-height: 1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .timeline-item {
-            border-left: 2px solid #e2e8f0;
-            padding-left: 1rem;
-            padding-bottom: 1rem;
-            position: relative;
-        }
-        .timeline-dot {
-            position: absolute;
-            left: -9px;
-            top: 0;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 9999px;
-            background-color: #cbd5e1;
-            border: 4px solid #ffffff;
-        }
-        .nav-link {
-            display: flex;
-            align-items: center;
-            padding: 0.75rem;
-            color: #94a3b8;
-            border-radius: 0.75rem;
-            transition: all 0.2s ease;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Master Summary Dashboard 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-        .nav-link:hover {
-            color: #ffffff;
-            background-color: #1e293b;
-        }
-        .active-nav {
-            background-color: #dc2626;
-            color: #ffffff;
-        }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #f8fafc;
+    }
 
-        .active-nav:hover {
-            background-color: #b91c1c;
-            color: #ffffff;
-        }
-    </style>
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .status-live { background: #dcfce7; color: #15803d; }
+    .status-uat { background: #dbeafe; color: #1d4ed8; }
+    .status-build { background: #fef3c7; color: #b45309; }
+    .status-risk { background: #fee2e2; color: #b91c1c; }
+    .status-wait { background: #f1f5f9; color: #475569; }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: #dc2626;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 14px;
+      color: #94a3b8;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #ffffff;
+      background: #1e293b;
+    }
+
+    .active-nav {
+      background: #dc2626;
+      color: white;
+    }
+
+    .table-row {
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .table-row:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
+
 <body class="text-slate-800">
 
-    <div class="flex min-h-screen">
-        <!-- Sidebar -->
-        <aside class="w-72 bg-slate-900 text-white p-6 hidden lg:block sticky top-0 h-screen">
-            <div class="mb-10 px-2">
-                <div class="flex items-center gap-2 text-red-500 mb-1">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span class="text-2xl font-black tracking-tighter text-white">CALIFORNIA</span>
-                </div>
-                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Commercial Roadmap 2026</p>
-            </div>
-            
-            <nav class="space-y-2">
-                <a href="#overview" class="nav-link active-nav">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-                    Overview
-                </a>
-                <a href="#ps-expertise" class="nav-link">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    PT Expertise & QC
-                </a>
-                <a href="#loyalty" class="nav-link">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    Loyalty & Rewards
-                </a>
-                <a href="#service" class="nav-link">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    Service Call
-                </a>
-                <a href="#ecommerce" class="nav-link">
-                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    E-Commerce
-                </a>
-            </nav>
-        </aside>
+<div class="flex min-h-screen">
 
-        <!-- Main Content -->
-        <main class="flex-1 p-4 lg:p-10 overflow-x-hidden">
-            <!-- Top Header -->
-            <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-                <div>
-                    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Commercial Master Plan 2026</h1>
-                    <p class="text-slate-500 mt-1 font-medium">Strategic Execution & Technical Operations Summary</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200">
-                        <span class="block text-[10px] uppercase font-bold text-slate-400">Reporting Status</span>
-                        <span class="text-red-600 font-bold">April 28, 2026</span>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                <div class="bg-red-50 p-5 rounded-2xl border border-red-100">
-                    <span class="text-red-600 text-xs font-bold uppercase block mb-1">Live Projects</span>
-                    <span class="text-2xl font-bold text-slate-800">Service Call</span>
-                    <div class="mt-2 text-[11px] text-red-500 font-semibold">● Operational since Feb 23</div>
-                </div>
-                <div class="bg-blue-50 p-5 rounded-2xl border border-blue-100">
-                    <span class="text-blue-600 text-xs font-bold uppercase block mb-1">Technical Focus</span>
-                    <span class="text-2xl font-bold text-slate-800">UAT Loyalty</span>
-                    <div class="mt-2 text-[11px] text-blue-500 font-semibold">● Fixing bugs post-UAT Round 2</div>
-                </div>
-                <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
-                    <span class="text-emerald-600 text-xs font-bold uppercase block mb-1">New Models</span>
-                    <span class="text-2xl font-bold text-slate-800">Cali Wellness Hub</span>
-                    <div class="mt-2 text-[11px] text-emerald-500 font-semibold">● Round 4 Demo (Group Class)</div>
-                </div>
-                <div class="bg-amber-50 p-5 rounded-2xl border border-amber-100">
-                    <span class="text-amber-600 text-xs font-bold uppercase block mb-1">Compliance</span>
-                    <span class="text-2xl font-bold text-slate-800">DOIT Registration</span>
-                    <div class="mt-2 text-[11px] text-amber-500 font-semibold">● Collecting E-com documents</div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
-                <!-- Left & Middle Column -->
-                <div class="xl:col-span-2 space-y-8">
-                    
-                    <!-- 1. PS TEAM & PT EXPERTISE -->
-                    <section id="ps-expertise" class="section-card">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-xl font-bold flex items-center">
-                                <span class="w-2 h-6 bg-red-600 rounded-full mr-3"></span>
-                                PS Team: Capability & Quality Control
-                            </h2>
-                            <span class="status-badge bg-emerald-100 text-emerald-700">In Implementation</span>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="space-y-4">
-                                <div class="p-4 bg-slate-50 rounded-xl">
-                                    <h3 class="font-bold text-sm mb-2 text-slate-700">PT Expertise & QC</h3>
-                                    <ul class="text-xs space-y-2 text-slate-600">
-                                        <li class="flex items-start">
-                                            <svg class="w-4 h-4 text-emerald-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-                                            Established Quality Control (QC) process for Personal Training sessions.
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-4 h-4 text-emerald-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-                                            Standardized certification and training requirements for PTs.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="p-4 bg-slate-50 rounded-xl">
-                                    <h3 class="font-bold text-sm mb-2 text-slate-700">Recovery Campaign</h3>
-                                    <p class="text-xs text-slate-600">Reactivate expired PT clients: Coordination with PS Team to filter leads and execute re-engagement scripts.</p>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="p-4 bg-red-50 rounded-xl border border-red-100">
-                                    <h3 class="font-bold text-sm mb-2 text-red-700">Guest Journey Mapping</h3>
-                                    <div class="text-[11px] text-slate-700 space-y-2">
-                                        <p><strong>Data Tracking:</strong> Daily monitoring of Lead Volume → Show Rate → Closing vs. Walk-away rates.</p>
-                                        <p><strong>Flow Design:</strong> Trinh/Ben/Bell finalized Guest Journey maps 1 & 2 for operational optimization.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 2. LOYALTY & MEMBER REWARD -->
-                    <section id="loyalty" class="section-card">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-xl font-bold flex items-center">
-                                <span class="w-2 h-6 bg-blue-600 rounded-full mr-3"></span>
-                                Member Reward & Loyalty Program
-                            </h2>
-                            <span class="status-badge bg-blue-100 text-blue-700">Technical UAT Phase</span>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="grid md:grid-cols-3 gap-4">
-                                <div class="border border-slate-100 p-4 rounded-xl text-center">
-                                    <span class="block text-xl font-bold text-blue-600">Fitness Star</span>
-                                    <span class="text-[10px] font-bold text-slate-400 uppercase">Pricing & Gift Budget</span>
-                                </div>
-                                <div class="border border-slate-100 p-4 rounded-xl text-center">
-                                    <span class="block text-xl font-bold text-blue-600">Non-Physical</span>
-                                    <span class="text-[10px] font-bold text-slate-400 uppercase">CRM Gift Management</span>
-                                </div>
-                                <div class="border border-slate-100 p-4 rounded-xl text-center">
-                                    <span class="block text-xl font-bold text-blue-600">App UX/UI</span>
-                                    <span class="text-[10px] font-bold text-slate-400 uppercase">Sitemap & Member App</span>
-                                </div>
-                            </div>
-
-                            <div class="bg-slate-900 text-white p-6 rounded-2xl">
-                                <h3 class="text-sm font-bold mb-4 flex items-center">
-                                    <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/></svg>
-                                    IT Implementation Roadmap (UAT & Demo)
-                                </h3>
-                                <div class="space-y-3">
-                                    <div class="flex justify-between items-center text-xs border-b border-slate-800 pb-2">
-                                        <span class="text-slate-400">Conduct 1st UAT (CRM & App)</span>
-                                        <span class="font-mono text-emerald-400">April 01 & 07, 2026 (Done)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center text-xs border-b border-slate-800 pb-2">
-                                        <span class="text-slate-400">Review feedback & Fix all issues</span>
-                                        <span class="font-mono text-yellow-400">Deadline: April 12, 2026 (In-progress)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center text-xs border-b border-slate-800 pb-2">
-                                        <span class="text-slate-400">Final Demo & Marketing Presentation</span>
-                                        <span class="font-mono text-blue-400">Upcoming: May 06, 2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 3. SERVICE CALL (RETENTION) -->
-                    <section id="service" class="section-card">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-xl font-bold flex items-center">
-                                <span class="w-2 h-6 bg-emerald-600 rounded-full mr-3"></span>
-                                Service Call: New Member Onboarding
-                            </h2>
-                            <span class="status-badge bg-emerald-100 text-emerald-700">Operational</span>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-4">
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-emerald-100 p-2 rounded-lg text-emerald-600">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-sm">ZNS & Call Scripts</h4>
-                                        <p class="text-[11px] text-slate-500">Dedicated scripts for new joins, low check-ins (30 days), and unsigned contracts.</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-blue-100 p-2 rounded-lg text-blue-600">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-sm">Jira Feedback System</h4>
-                                        <p class="text-[11px] text-slate-500">Custom Microsoft Form for the SC Team to push feedback directly to JIRA for MS resolution.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Operational Info</h4>
-                                <div class="space-y-2">
-                                    <div class="flex justify-between text-[11px]">
-                                        <span class="text-slate-500">Phone Registration:</span>
-                                        <span class="font-bold">ID Number Finalized</span>
-                                    </div>
-                                    <div class="flex justify-between text-[11px]">
-                                        <span class="text-slate-500">Dashboard Monitor:</span>
-                                        <span class="font-bold text-emerald-600">Live (Qui/Phuong)</span>
-                                    </div>
-                                    <div class="flex justify-between text-[11px]">
-                                        <span class="text-slate-500">Contact Categories:</span>
-                                        <span class="font-bold">Welcome / Low Check-in</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- Right Column -->
-                <div class="space-y-8">
-                    
-                    <!-- 4. E-COMMERCE & WEBSITE -->
-                    <section id="ecommerce" class="section-card">
-                        <h2 class="text-xl font-bold flex items-center mb-6">
-                            <span class="w-2 h-6 bg-amber-500 rounded-full mr-3"></span>
-                            E-Commerce Web
-                        </h2>
-                        <div class="space-y-5">
-                            <div class="p-4 bg-amber-50 rounded-xl border border-amber-100">
-                                <h4 class="text-xs font-bold text-amber-700 uppercase mb-2">DOIT Registration</h4>
-                                <p class="text-[11px] text-slate-600 italic">"Verifying current domain status and researching costs/names for ecom.cali.vn"</p>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4 class="font-bold text-xs">UX/UI Landing Page</h4>
-                                <p class="text-[10px] text-slate-500">Thanh/Loan finalized "Fresh & Attractive" design demo.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4 class="font-bold text-xs">System Development</h4>
-                                <p class="text-[10px] text-slate-500">IT (Phat/Marvin) executing Round 1 demos and bug fixing based on user feedback.</p>
-                            </div>
-                            <div class="timeline-item border-none">
-                                <div class="timeline-dot bg-blue-500 border-blue-100"></div>
-                                <h4 class="font-bold text-xs">Internal UAT</h4>
-                                <p class="text-[10px] text-slate-500">Departmental feedback due by 5 PM, March 03 for Round 2 scheduling.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- 5. PAYMENT & FINTECH -->
-                    <section id="payment" class="section-card">
-                        <h2 class="text-xl font-bold flex items-center mb-6">
-                            <span class="w-2 h-6 bg-purple-600 rounded-full mr-3"></span>
-                            Payment & Fintech
-                        </h2>
-                        <div class="p-4 bg-purple-50 rounded-xl border border-purple-100 mb-4">
-                            <h4 class="text-xs font-bold text-purple-700 mb-2">Core Integrations:</h4>
-                            <ul class="text-[10px] text-slate-600 space-y-1">
-                                <li>● MCA/Platform to <strong>Payoo</strong> (Swipe Card)</li>
-                                <li>● MCA/Platform to <strong>VCB</strong> (Bank Transfer)</li>
-                                <li>● Automated <strong>CRM + AX</strong> Data Sync</li>
-                            </ul>
-                        </div>
-                        <div class="flex items-center justify-between text-[11px] px-2 font-bold">
-                            <span class="text-slate-400">Status:</span>
-                            <span class="text-purple-600 underline">UAT Round 2 (April 13 - 17)</span>
-                        </div>
-                    </section>
-
-                    <!-- 6. NEW MODELS (CWH & GYM) -->
-                    <section class="section-card bg-slate-50">
-                        <h2 class="text-xl font-bold flex items-center mb-6">
-                            <span class="w-2 h-6 bg-slate-400 rounded-full mr-3"></span>
-                            Models & Innovation
-                        </h2>
-                        <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
-                                <h4 class="font-bold text-xs text-slate-700">Cali Wellness Hub (CWH)</h4>
-                                <p class="text-[10px] text-slate-500 mt-1">Completed Round 4 demo for Group Class sales (Online/Offline). Direction finalized with IT Hiep/Vinh.</p>
-                            </div>
-                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 opacity-75">
-                                <h4 class="font-bold text-xs text-slate-700">New Gym Model</h4>
-                                <p class="text-[10px] text-slate-500 mt-1">Kick-off complete. Awaiting detailed system architecture instructions from IT (Mr. Hai).</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <footer class="mt-12 pt-8 border-t border-slate-200 text-center">
-                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">California Commercial Team | Internal Report | Confidentially Distributed</p>
-            </footer>
-        </main>
+  <!-- SIDEBAR -->
+  <aside class="w-72 bg-slate-950 text-white p-6 hidden lg:block sticky top-0 h-screen">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 text-red-500 mb-2">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        <span class="text-2xl font-black tracking-tighter text-white">CALIFORNIA</span>
+      </div>
+      <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">
+        Commercial Summary Dashboard
+      </p>
     </div>
+
+    <nav class="space-y-2">
+      <a href="#executive" class="nav-link active-nav">Executive View</a>
+      <a href="#summary" class="nav-link">Workstream Summary</a>
+      <a href="#priorities" class="nav-link">Priority Focus</a>
+      <a href="#risks" class="nav-link">Risks & Dependencies</a>
+      <a href="#next" class="nav-link">Next 30 Days</a>
+    </nav>
+
+    <div class="absolute bottom-6 left-6 right-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Dashboard Use</p>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          High-level update for Commercial, IT, MKT and operation alignment.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="flex-1 p-4 lg:p-10 overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header id="executive" class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+      <div>
+        <p class="text-red-600 font-extrabold text-xs uppercase tracking-[0.25em] mb-2">High Level Update</p>
+        <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight">
+          Commercial Master Roadmap 2026
+        </h1>
+        <p class="text-slate-500 mt-2 font-medium">
+          Summary dashboard of key initiatives, execution status, risks and next actions.
+        </p>
+      </div>
+
+      <div class="card px-5 py-3">
+        <span class="block text-[10px] uppercase font-bold text-slate-400">Reporting Date</span>
+        <span class="text-red-600 font-extrabold text-lg">April 28, 2026</span>
+      </div>
+    </header>
+
+    <!-- KPI CARDS -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
+      <div class="card p-5">
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Total Workstreams</p>
+        <div class="flex items-end justify-between">
+          <h2 class="text-4xl font-black text-slate-950">9</h2>
+          <span class="badge status-build">Active</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">Across retention, digital, payment, PT and new models.</p>
+      </div>
+
+      <div class="card p-5">
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Live / Operating</p>
+        <div class="flex items-end justify-between">
+          <h2 class="text-4xl font-black text-emerald-600">1</h2>
+          <span class="badge status-live">Live</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">Service Call has moved into operational execution.</p>
+      </div>
+
+      <div class="card p-5">
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">In UAT / Demo</p>
+        <div class="flex items-end justify-between">
+          <h2 class="text-4xl font-black text-blue-600">5</h2>
+          <span class="badge status-uat">Testing</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">Loyalty, e-commerce, payment, CWH and PT system.</p>
+      </div>
+
+      <div class="card p-5">
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Key Dependency</p>
+        <div class="flex items-end justify-between">
+          <h2 class="text-4xl font-black text-amber-600">IT</h2>
+          <span class="badge status-risk">Critical</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">Most projects require IT timeline, bug fixing and UAT support.</p>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="card p-6 lg:p-8 mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+        <div>
+          <h2 class="text-2xl font-extrabold text-slate-950">Executive Summary</h2>
+          <p class="text-sm text-slate-500 mt-1">The current roadmap is no longer a task list. It is forming three core commercial engines.</p>
+        </div>
+        <span class="badge status-build">Overall Status: Building System</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-red-50 border border-red-100 rounded-2xl p-5">
+          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">1. Data Engine</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Truth & Visibility</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Commercial dashboard, guest journey, lead-to-show-to-close data and club performance visibility.
+          </p>
+        </div>
+
+        <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">2. Execution Engine</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Retention & Cash Recovery</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Service call, PT reactivation, MS follow-up process, ZNS scripts and operational feedback loop.
+          </p>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">3. Platform Engine</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Scalable Growth</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Loyalty, e-commerce, payment integration, app experience and new business models.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSTREAM SUMMARY -->
+    <section id="summary" class="card p-6 lg:p-8 mb-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+        <div>
+          <h2 class="text-2xl font-extrabold text-slate-950">Workstream Summary</h2>
+          <p class="text-sm text-slate-500 mt-1">Owner details removed. Focus is on status, output and next action.</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="text-xs uppercase text-slate-400 border-b border-slate-200">
+              <th class="py-3 pr-4">Workstream</th>
+              <th class="py-3 pr-4">Main Objective</th>
+              <th class="py-3 pr-4">Status</th>
+              <th class="py-3 pr-4">Progress</th>
+              <th class="py-3 pr-4">Next Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Commercial Foundation</td>
+              <td class="py-4 pr-4 text-slate-600">Define KPI, role, GM project, dashboard and guest journey.</td>
+              <td class="py-4 pr-4"><span class="badge status-build">In Progress</span></td>
+              <td class="py-4 pr-4 min-w-[130px]"><div class="progress-track"><div class="progress-fill" style="width:65%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Finalize dashboard logic and funnel metrics.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Member Reward / Loyalty</td>
+              <td class="py-4 pr-4 text-slate-600">Build loyalty program, gift model, CRM/App flow and UX/UI.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Demo</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:70%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Close UAT bugs and prepare final demo / MKT handover.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Service Call</td>
+              <td class="py-4 pr-4 text-slate-600">Onboard new members and improve early retention.</td>
+              <td class="py-4 pr-4"><span class="badge status-live">Operational</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:85%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Monitor dashboard, Jira feedback and long-term performance.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">E-Commerce Website</td>
+              <td class="py-4 pr-4 text-slate-600">Support online package sales through landing page and digital flow.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Build</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:60%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Fix user feedback, update onboarding template and finalize domain handover.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Payment Process</td>
+              <td class="py-4 pr-4 text-slate-600">Integrate Payoo, VCB, CRM and AX to streamline payment collection.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT Round 2</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:55%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Complete bug fixing and retest both card and bank transfer scenarios.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">CWH Group Class</td>
+              <td class="py-4 pr-4 text-slate-600">Build product and system flow for CWH group class sales.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">Demo Cycle</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:75%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Consolidate feedback from demo rounds and lock 4th demo outcome.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">New Gym Model</td>
+              <td class="py-4 pr-4 text-slate-600">Prepare system setup for new gym model transition.</td>
+              <td class="py-4 pr-4"><span class="badge status-wait">Waiting IT</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:20%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Define system architecture and transition campaign requirement.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">PT Expertise</td>
+              <td class="py-4 pr-4 text-slate-600">Create PT quality, expertise and certification system.</td>
+              <td class="py-4 pr-4"><span class="badge status-build">Build</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:50%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Confirm IT timeline, run UAT and prepare go-live.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Expired PT Reactivation</td>
+              <td class="py-4 pr-4 text-slate-600">Recover expired PT clients through data filter and MS process.</td>
+              <td class="py-4 pr-4"><span class="badge status-build">Process Design</span></td>
+              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:45%"></div></div></td>
+              <td class="py-4 pr-4 text-slate-600">Finalize MS format, test gift redeem function and announce official process.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PRIORITIES -->
+    <section id="priorities" class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
+      <div class="card p-6 xl:col-span-2">
+        <h2 class="text-2xl font-extrabold text-slate-950 mb-4">Priority Focus</h2>
+
+        <div class="space-y-4">
+          <div class="flex gap-4 p-4 rounded-2xl bg-red-50 border border-red-100">
+            <div class="w-9 h-9 rounded-xl bg-red-600 text-white font-black flex items-center justify-center">1</div>
+            <div>
+              <h3 class="font-extrabold text-slate-950">Fix cash and retention leakage first</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Service Call, PT reactivation and guest journey dashboard should be prioritized because they directly impact retention and near-term cash recovery.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-4 rounded-2xl bg-blue-50 border border-blue-100">
+            <div class="w-9 h-9 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center">2</div>
+            <div>
+              <h3 class="font-extrabold text-slate-950">Close all open UAT loops</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Loyalty, payment and e-commerce are all in testing/build cycles. Bug ownership and retesting dates must be locked.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-4 rounded-2xl bg-amber-50 border border-amber-100">
+            <div class="w-9 h-9 rounded-xl bg-amber-500 text-white font-black flex items-center justify-center">3</div>
+            <div>
+              <h3 class="font-extrabold text-slate-950">Avoid too many parallel projects without output definition</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Every initiative should have a clear “done” definition: go-live, dashboard live, UAT signed off, training completed or MKT handover done.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-6">
+        <h2 class="text-2xl font-extrabold text-slate-950 mb-4">Status Mix</h2>
+
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span>Operational</span><span>1</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:12%; background:#16a34a;"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span>UAT / Demo</span><span>5</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:55%; background:#2563eb;"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span>Build / Process Design</span><span>2</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:22%; background:#f59e0b;"></div></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1">
+              <span>Waiting</span><span>1</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:11%; background:#64748b;"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISKS -->
+    <section id="risks" class="card p-6 lg:p-8 mb-8">
+      <h2 class="text-2xl font-extrabold text-slate-950 mb-5">Risks & Dependencies</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div class="border border-red-100 bg-red-50 rounded-2xl p-5">
+          <span class="badge status-risk mb-3">Risk</span>
+          <h3 class="font-extrabold mb-2">IT bottleneck</h3>
+          <p class="text-sm text-slate-600">Multiple streams depend on IT for system build, demo, bug fixing and UAT sign-off.</p>
+        </div>
+
+        <div class="border border-amber-100 bg-amber-50 rounded-2xl p-5">
+          <span class="badge status-build mb-3">Risk</span>
+          <h3 class="font-extrabold mb-2">UAT fatigue</h3>
+          <p class="text-sm text-slate-600">Many departments are required to test several projects in parallel.</p>
+        </div>
+
+        <div class="border border-slate-200 bg-slate-50 rounded-2xl p-5">
+          <span class="badge status-wait mb-3">Dependency</span>
+          <h3 class="font-extrabold mb-2">DOIT / Domain</h3>
+          <p class="text-sm text-slate-600">E-commerce go-live requires documentation, domain readiness and official handover.</p>
+        </div>
+
+        <div class="border border-blue-100 bg-blue-50 rounded-2xl p-5">
+          <span class="badge status-uat mb-3">Dependency</span>
+          <h3 class="font-extrabold mb-2">MKT handover</h3>
+          <p class="text-sm text-slate-600">Loyalty and e-commerce both need final UX/UI and campaign preparation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT 30 DAYS -->
+    <section id="next" class="card p-6 lg:p-8 mb-8">
+      <h2 class="text-2xl font-extrabold text-slate-950 mb-5">Next 30 Days Action Focus</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Week 1</p>
+          <h3 class="font-extrabold mb-2">Lock the dashboard logic</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Finalize guest journey metrics</li>
+            <li>• Confirm commercial dashboard data source</li>
+            <li>• Define weekly high-level reporting format</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Week 2-3</p>
+          <h3 class="font-extrabold mb-2">Close testing loops</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Loyalty UAT issue closure</li>
+            <li>• Payment user test and bug fix</li>
+            <li>• E-commerce landing page retest</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 p-5">
+          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Week 4</p>
+          <h3 class="font-extrabold mb-2">Prepare rollout readiness</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Service Call performance review</li>
+            <li>• PT reactivation process announcement</li>
+            <li>• MKT handover for loyalty / e-commerce</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-10 pt-8 border-t border-slate-200 text-center">
+      <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+        California Commercial Team | High Level Roadmap Update | Internal Use
+      </p>
+    </footer>
+
+  </main>
+</div>
 
 </body>
 </html>
