@@ -29,6 +29,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+      white-space: nowrap;
     }
 
     .status-live { background: #dcfce7; color: #15803d; }
@@ -102,11 +103,10 @@
 
     <nav class="space-y-2">
       <a href="#executive" class="nav-link active-nav">Executive View</a>
-      <a href="#summary" class="nav-link">Workstream Summary</a>
-      <a href="#phase2" class="nav-link">New Project Phase 2</a>
-      <a href="#priorities" class="nav-link">Priority Focus</a>
-      <a href="#phase2" class="nav-link">New Project Phase 2</a>
-      <a href="#risks" class="nav-link">Risks & Dependencies</a>
+      <a href="#summary" class="nav-link">BOD Summary</a>
+      <a href="#outcomes" class="nav-link">Outcome Focus</a>
+      <a href="#phase2" class="nav-link">Phase 2 Execution</a>
+      <a href="#risks" class="nav-link">Risks & Decisions</a>
       <a href="#next" class="nav-link">Next 30 Days</a>
     </nav>
 
@@ -114,7 +114,7 @@
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
         <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Dashboard Use</p>
         <p class="text-xs text-slate-300 leading-relaxed">
-          High-level update for Commercial, IT, MKT and operation alignment.
+          BOD-level view focused on outcomes, business impact, risks and decisions.
         </p>
       </div>
     </div>
@@ -126,12 +126,12 @@
     <!-- HEADER -->
     <header id="executive" class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
       <div>
-        <p class="text-red-600 font-extrabold text-xs uppercase tracking-[0.25em] mb-2">High Level Update</p>
+        <p class="text-red-600 font-extrabold text-xs uppercase tracking-[0.25em] mb-2">BOD View</p>
         <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight">
           Commercial Master Roadmap 2026
         </h1>
         <p class="text-slate-500 mt-2 font-medium">
-          Summary dashboard of key initiatives, execution status, risks and next actions.
+          Outcome-based summary of commercial priorities, business impact, execution risks and required decisions.
         </p>
       </div>
 
@@ -144,39 +144,39 @@
     <!-- KPI CARDS -->
     <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
       <div class="card p-5">
-        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Total Workstreams</p>
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Strategic Workstreams</p>
         <div class="flex items-end justify-between">
-          <h2 class="text-4xl font-black text-slate-950">9</h2>
+          <h2 class="text-4xl font-black text-slate-950">8</h2>
           <span class="badge status-build">Active</span>
         </div>
-        <p class="text-xs text-slate-500 mt-3">Across retention, digital, payment, PT and new models.</p>
+        <p class="text-xs text-slate-500 mt-3">Grouped by revenue, retention, digital platform and execution control.</p>
       </div>
 
       <div class="card p-5">
-        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Live / Operating</p>
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Immediate Outcome</p>
         <div class="flex items-end justify-between">
-          <h2 class="text-4xl font-black text-emerald-600">1</h2>
-          <span class="badge status-live">Live</span>
+          <h2 class="text-4xl font-black text-emerald-600">Cash</h2>
+          <span class="badge status-live">Priority</span>
         </div>
-        <p class="text-xs text-slate-500 mt-3">Service Call has moved into operational execution.</p>
+        <p class="text-xs text-slate-500 mt-3">Protect cash recovery through service call, PT reactivation and payment flow.</p>
       </div>
 
       <div class="card p-5">
-        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">In UAT / Demo</p>
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Medium-Term Outcome</p>
         <div class="flex items-end justify-between">
-          <h2 class="text-4xl font-black text-blue-600">5</h2>
-          <span class="badge status-uat">Testing</span>
+          <h2 class="text-4xl font-black text-blue-600">LTV</h2>
+          <span class="badge status-uat">Build</span>
         </div>
-        <p class="text-xs text-slate-500 mt-3">Loyalty, e-commerce, payment, CWH and PT system.</p>
+        <p class="text-xs text-slate-500 mt-3">Increase member value through loyalty, ecosystem usage and PT penetration.</p>
       </div>
 
       <div class="card p-5">
-        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">Key Dependency</p>
+        <p class="text-xs font-extrabold uppercase text-slate-400 mb-2">BOD Attention</p>
         <div class="flex items-end justify-between">
           <h2 class="text-4xl font-black text-amber-600">IT</h2>
           <span class="badge status-risk">Critical</span>
         </div>
-        <p class="text-xs text-slate-500 mt-3">Most projects require IT timeline, bug fixing and UAT support.</p>
+        <p class="text-xs text-slate-500 mt-3">Most outcomes depend on IT timeline, bug closure and UAT sign-off.</p>
       </div>
     </section>
 
@@ -185,44 +185,44 @@
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
         <div>
           <h2 class="text-2xl font-extrabold text-slate-950">Executive Summary</h2>
-          <p class="text-sm text-slate-500 mt-1">The current roadmap is no longer a task list. It is forming three core commercial engines.</p>
+          <p class="text-sm text-slate-500 mt-1">The roadmap is being simplified into three commercial outcomes for BOD tracking.</p>
         </div>
-        <span class="badge status-build">Overall Status: Building System</span>
+        <span class="badge status-build">Overall Status: Execution Build</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-red-50 border border-red-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">1. Data Engine</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Truth & Visibility</h3>
+          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Outcome 1</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Revenue Quality</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Commercial dashboard, guest journey, lead-to-show-to-close data and club performance visibility.
+            Reduce pricing noise, discount abuse and product splitting. Build a more disciplined sales model.
           </p>
         </div>
 
         <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">2. Execution Engine</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Retention & Cash Recovery</h3>
+          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Outcome 2</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Member Value & Retention</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Service call, PT reactivation, MS follow-up process, ZNS scripts and operational feedback loop.
+            Improve member onboarding, PT usage, reactivation, renewal and lifetime value.
           </p>
         </div>
 
         <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">3. Platform Engine</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Scalable Growth</h3>
+          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Outcome 3</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Scalable Platform</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Loyalty, e-commerce, payment integration, app experience and new business models.
+            Build loyalty, e-commerce, payment and data systems that can scale across all clubs.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- WORKSTREAM SUMMARY -->
+    <!-- BOD SUMMARY TABLE -->
     <section id="summary" class="card p-6 lg:p-8 mb-8">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
         <div>
-          <h2 class="text-2xl font-extrabold text-slate-950">Workstream Summary</h2>
-          <p class="text-sm text-slate-500 mt-1">Owner details removed. Focus is on status, output and next action.</p>
+          <h2 class="text-2xl font-extrabold text-slate-950">BOD Summary by Workstream</h2>
+          <p class="text-sm text-slate-500 mt-1">Simplified view: outcome, business impact, status and decision needed.</p>
         </div>
       </div>
 
@@ -231,121 +231,121 @@
           <thead>
             <tr class="text-xs uppercase text-slate-400 border-b border-slate-200">
               <th class="py-3 pr-4">Workstream</th>
-              <th class="py-3 pr-4">Main Objective</th>
+              <th class="py-3 pr-4">Expected Outcome</th>
+              <th class="py-3 pr-4">Business Impact</th>
               <th class="py-3 pr-4">Status</th>
-              <th class="py-3 pr-4">Progress</th>
-              <th class="py-3 pr-4">Next Action</th>
+              <th class="py-3 pr-4">BOD Focus / Decision</th>
             </tr>
           </thead>
           <tbody>
             <tr class="table-row">
               <td class="py-4 pr-4 font-extrabold text-slate-900">Commercial Foundation</td>
-              <td class="py-4 pr-4 text-slate-600">Define KPI, role, GM project, dashboard and guest journey.</td>
+              <td class="py-4 pr-4 text-slate-600">One clear view of conversion, pricing, PT attach and club performance.</td>
+              <td class="py-4 pr-4 text-slate-600">Improves business clarity and reduces fake performance reporting.</td>
               <td class="py-4 pr-4"><span class="badge status-build">In Progress</span></td>
-              <td class="py-4 pr-4 min-w-[130px]"><div class="progress-track"><div class="progress-fill" style="width:65%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Finalize dashboard logic and funnel metrics.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">Member Reward / Loyalty</td>
-              <td class="py-4 pr-4 text-slate-600">Build loyalty program, gift model, CRM/App flow and UX/UI.</td>
-              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Demo</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:70%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Close UAT bugs and prepare final demo / MKT handover.</td>
+              <td class="py-4 pr-4 text-slate-600">Agree final KPI logic and dashboard ownership.</td>
             </tr>
 
             <tr class="table-row">
               <td class="py-4 pr-4 font-extrabold text-slate-900">Service Call</td>
-              <td class="py-4 pr-4 text-slate-600">Onboard new members and improve early retention.</td>
-              <td class="py-4 pr-4"><span class="badge status-live">Operational</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:85%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Monitor dashboard, Jira feedback and long-term performance.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">E-Commerce Website</td>
-              <td class="py-4 pr-4 text-slate-600">Support online package sales through landing page and digital flow.</td>
-              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Build</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:60%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Fix user feedback, update onboarding template and finalize domain handover.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">Payment Process</td>
-              <td class="py-4 pr-4 text-slate-600">Integrate Payoo, VCB, CRM and AX to streamline payment collection.</td>
-              <td class="py-4 pr-4"><span class="badge status-uat">UAT Round 2</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:55%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Complete bug fixing and retest both card and bank transfer scenarios.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">CWH Group Class</td>
-              <td class="py-4 pr-4 text-slate-600">Build product and system flow for CWH group class sales.</td>
-              <td class="py-4 pr-4"><span class="badge status-uat">Demo Cycle</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:75%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Consolidate feedback from demo rounds and lock 4th demo outcome.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">New Gym Model</td>
-              <td class="py-4 pr-4 text-slate-600">Prepare system setup for new gym model transition.</td>
-              <td class="py-4 pr-4"><span class="badge status-wait">Waiting IT</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:20%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Define system architecture and transition campaign requirement.</td>
-            </tr>
-
-            <tr class="table-row">
-              <td class="py-4 pr-4 font-extrabold text-slate-900">PT Expertise</td>
-              <td class="py-4 pr-4 text-slate-600">Create PT quality, expertise and certification system.</td>
-              <td class="py-4 pr-4"><span class="badge status-build">Build</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:50%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Confirm IT timeline, run UAT and prepare go-live.</td>
+              <td class="py-4 pr-4 text-slate-600">New members are onboarded early and pushed into usage faster.</td>
+              <td class="py-4 pr-4 text-slate-600">Higher activation, lower early churn and stronger renewal base.</td>
+              <td class="py-4 pr-4"><span class="badge status-live">Operating</span></td>
+              <td class="py-4 pr-4 text-slate-600">Track retention and usage result after rollout.</td>
             </tr>
 
             <tr class="table-row">
               <td class="py-4 pr-4 font-extrabold text-slate-900">Expired PT Reactivation</td>
-              <td class="py-4 pr-4 text-slate-600">Recover expired PT clients through data filter and MS process.</td>
-              <td class="py-4 pr-4"><span class="badge status-build">Process Design</span></td>
-              <td class="py-4 pr-4"><div class="progress-track"><div class="progress-fill" style="width:45%"></div></div></td>
-              <td class="py-4 pr-4 text-slate-600">Finalize MS format, test gift redeem function and announce official process.</td>
+              <td class="py-4 pr-4 text-slate-600">Recover expired PT clients through data filter, gift trigger and MS follow-up.</td>
+              <td class="py-4 pr-4 text-slate-600">Creates near-term cash recovery and strengthens PT penetration.</td>
+              <td class="py-4 pr-4"><span class="badge status-build">Design</span></td>
+              <td class="py-4 pr-4 text-slate-600">Approve process, gift rule and official field announcement.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Member Reward / Loyalty</td>
+              <td class="py-4 pr-4 text-slate-600">Members have reasons to stay active, redeem and engage with the ecosystem.</td>
+              <td class="py-4 pr-4 text-slate-600">Supports retention, app usage, repeat purchase and customer loyalty.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Demo</span></td>
+              <td class="py-4 pr-4 text-slate-600">Close UAT bugs and confirm launch scope.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">E-Commerce Website</td>
+              <td class="py-4 pr-4 text-slate-600">Customers can view and buy selected packages through digital flow.</td>
+              <td class="py-4 pr-4 text-slate-600">Opens online sales channel and reduces dependency on manual quotation.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT / Build</span></td>
+              <td class="py-4 pr-4 text-slate-600">Confirm product list, domain handover and go-live readiness.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">Payment Process</td>
+              <td class="py-4 pr-4 text-slate-600">Payment collection becomes faster, cleaner and better connected to CRM / AX.</td>
+              <td class="py-4 pr-4 text-slate-600">Improves collection speed, reconciliation and customer payment experience.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">UAT Round 2</span></td>
+              <td class="py-4 pr-4 text-slate-600">Prioritize bug closure for card and bank transfer scenarios.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">CWH Group Class</td>
+              <td class="py-4 pr-4 text-slate-600">CWH can sell group class products with clear system flow.</td>
+              <td class="py-4 pr-4 text-slate-600">Creates additional revenue line and supports wellness positioning.</td>
+              <td class="py-4 pr-4"><span class="badge status-uat">Demo</span></td>
+              <td class="py-4 pr-4 text-slate-600">Lock product rule and final demo outcome.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">New Gym Model</td>
+              <td class="py-4 pr-4 text-slate-600">Prepare the system for future basis-access plus pay-up-to-usage model.</td>
+              <td class="py-4 pr-4 text-slate-600">Supports pricing control, customer flexibility and scalable membership design.</td>
+              <td class="py-4 pr-4"><span class="badge status-wait">Waiting IT</span></td>
+              <td class="py-4 pr-4 text-slate-600">Decide IT timeline and transition campaign requirement.</td>
+            </tr>
+
+            <tr class="table-row">
+              <td class="py-4 pr-4 font-extrabold text-slate-900">PT Expertise</td>
+              <td class="py-4 pr-4 text-slate-600">Build visible PT quality, specialty and certification structure.</td>
+              <td class="py-4 pr-4 text-slate-600">Improves PT trust, service quality, renewal and premium pricing confidence.</td>
+              <td class="py-4 pr-4"><span class="badge status-build">Build</span></td>
+              <td class="py-4 pr-4 text-slate-600">Confirm go-live standard and required IT support.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- PRIORITIES -->
-    <section id="priorities" class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
+    <!-- OUTCOME FOCUS -->
+    <section id="outcomes" class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
       <div class="card p-6 xl:col-span-2">
-        <h2 class="text-2xl font-extrabold text-slate-950 mb-4">Priority Focus</h2>
+        <h2 class="text-2xl font-extrabold text-slate-950 mb-4">Outcome Focus</h2>
 
         <div class="space-y-4">
           <div class="flex gap-4 p-4 rounded-2xl bg-red-50 border border-red-100">
             <div class="w-9 h-9 rounded-xl bg-red-600 text-white font-black flex items-center justify-center">1</div>
             <div>
-              <h3 class="font-extrabold text-slate-950">Fix cash and retention leakage first</h3>
+              <h3 class="font-extrabold text-slate-950">Revenue becomes cleaner</h3>
               <p class="text-sm text-slate-600 mt-1">
-                Service Call, PT reactivation and guest journey dashboard should be prioritized because they directly impact retention and near-term cash recovery.
+                Pricing must be consistent. Premium packages should be sold as controlled SKUs, not split into unofficial components.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
+            <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center">2</div>
+            <div>
+              <h3 class="font-extrabold text-slate-950">Member value increases</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Service Call, PT reactivation, loyalty and CWH must increase usage, renewal and ecosystem spending.
               </p>
             </div>
           </div>
 
           <div class="flex gap-4 p-4 rounded-2xl bg-blue-50 border border-blue-100">
-            <div class="w-9 h-9 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center">2</div>
+            <div class="w-9 h-9 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center">3</div>
             <div>
-              <h3 class="font-extrabold text-slate-950">Close all open UAT loops</h3>
+              <h3 class="font-extrabold text-slate-950">Execution becomes scalable</h3>
               <p class="text-sm text-slate-600 mt-1">
-                Loyalty, payment and e-commerce are all in testing/build cycles. Bug ownership and retesting dates must be locked.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-4 p-4 rounded-2xl bg-amber-50 border border-amber-100">
-            <div class="w-9 h-9 rounded-xl bg-amber-500 text-white font-black flex items-center justify-center">3</div>
-            <div>
-              <h3 class="font-extrabold text-slate-950">Avoid too many parallel projects without output definition</h3>
-              <p class="text-sm text-slate-600 mt-1">
-                Every initiative should have a clear “done” definition: go-live, dashboard live, UAT signed off, training completed or MKT handover done.
+                Dashboard, payment, e-commerce and commercial support must create repeatable execution across all clubs.
               </p>
             </div>
           </div>
@@ -358,44 +358,43 @@
         <div class="space-y-4">
           <div>
             <div class="flex justify-between text-xs font-bold mb-1">
-              <span>Operational</span><span>1</span>
+              <span>Operating</span><span>1</span>
             </div>
             <div class="progress-track"><div class="progress-fill" style="width:12%; background:#16a34a;"></div></div>
           </div>
 
           <div>
             <div class="flex justify-between text-xs font-bold mb-1">
-              <span>UAT / Demo</span><span>5</span>
+              <span>UAT / Demo</span><span>4</span>
             </div>
-            <div class="progress-track"><div class="progress-fill" style="width:55%; background:#2563eb;"></div></div>
+            <div class="progress-track"><div class="progress-fill" style="width:45%; background:#2563eb;"></div></div>
           </div>
 
           <div>
             <div class="flex justify-between text-xs font-bold mb-1">
-              <span>Build / Process Design</span><span>2</span>
+              <span>Build / Design</span><span>3</span>
             </div>
-            <div class="progress-track"><div class="progress-fill" style="width:22%; background:#f59e0b;"></div></div>
+            <div class="progress-track"><div class="progress-fill" style="width:33%; background:#f59e0b;"></div></div>
           </div>
 
           <div>
             <div class="flex justify-between text-xs font-bold mb-1">
-              <span>Waiting</span><span>1</span>
+              <span>Waiting IT</span><span>1</span>
             </div>
-            <div class="progress-track"><div class="progress-fill" style="width:11%; background:#64748b;"></div></div>
+            <div class="progress-track"><div class="progress-fill" style="width:10%; background:#64748b;"></div></div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- NEW PROJECT PHASE 2 -->
+    <!-- PHASE 2 -->
     <section id="phase2" class="card p-6 lg:p-8 mb-8">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
         <div>
           <p class="text-red-600 font-extrabold text-xs uppercase tracking-[0.25em] mb-2">New Project Phase 2</p>
           <h2 class="text-2xl font-extrabold text-slate-950">Commercial Support Execution Arm</h2>
           <p class="text-sm text-slate-500 mt-1">
-            From strategy at Head Office to consistent execution on the club floor.
+            Designed to close the gap between Head Office strategy and club-floor execution.
           </p>
         </div>
         <span class="badge status-risk">May 2026 Priority</span>
@@ -403,259 +402,88 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         <div class="bg-red-50 border border-red-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Pillar 1</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Convert</h3>
+          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Convert</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Guest to Member</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Convert guests into members through clear sales flow, transparent pricing and consistent product explanation.
+            Improve conversion through consistent sales flow, correct pricing and clear product explanation.
           </p>
         </div>
 
         <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Pillar 2</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Optimize</h3>
+          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Optimize</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Member to Ecosystem</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Maximize member lifetime value by connecting members to PT, Supplements, Hypoxi and Vita services.
+            Increase lifetime value by connecting members to PT, Supplements, Hypoxi and Vita.
           </p>
         </div>
 
         <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Pillar 3</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Retain & Renew</h3>
+          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Retain</p>
+          <h3 class="font-extrabold text-slate-950 mb-2">Usage to Loyalty</h3>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Drive usage, results, proactive care, renewals and loyalty through member engagement.
+            Drive usage, results, proactive care and renewal readiness.
           </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Reality Check: Execution Gaps</h3>
-          <div class="space-y-4">
-            <div>
-              <p class="font-bold text-sm text-slate-900">Execution Inconsistency</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Club operations vary across 30+ clubs because execution depends too heavily on individual BM / BD / GM capability.
-              </p>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-slate-900">Price Re-engineering</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Unauthorized splitting of benefits, such as separating Sup cards from Master cards in premium packages, creates messy pricing and discount escalation.
-              </p>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-slate-900">Systemic Risk</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Inconsistent pricing leads to unstable PT penetration, unpredictable revenue and lower brand trust.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="rounded-2xl border border-red-100 bg-red-50 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Strategic Solution</h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-4">
-            Commercial Support is not a paperwork support team. It is the execution arm that brings the right product, sales process and pricing logic directly to the club floor.
-          </p>
-          <div class="bg-white rounded-xl p-4 border border-red-100">
-            <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Mandate</p>
-            <p class="text-sm text-slate-700">
-              Identify clubs doing it right and scale them. Detect clubs that are failing or faking compliance and correct them immediately.
-            </p>
-          </div>
         </div>
       </div>
 
       <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
         <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Team Structure</h3>
+          <h3 class="font-extrabold text-slate-950 mb-4">Problem to Solve</h3>
           <ul class="text-sm text-slate-600 space-y-3">
-            <li><strong>Training Lead:</strong> Product decks, sales scripts and role-play scenarios.</li>
-            <li><strong>On-club Deployment:</strong> Weekly training and coaching across assigned clubs.</li>
-            <li><strong>Process & Audit:</strong> Sales flow checklist, pricing compliance and random truth audits.</li>
-            <li><strong>Performance & Insight:</strong> Detect improving clubs and fake-risk clubs through data patterns.</li>
+            <li><strong>Inconsistent execution:</strong> Club results depend too much on individual manager capability.</li>
+            <li><strong>Pricing noise:</strong> Unauthorized benefit splitting creates messy quotation and discount pressure.</li>
+            <li><strong>Low trust:</strong> Customers and field teams lose confidence when offer logic is not consistent.</li>
           </ul>
         </div>
 
         <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Weekly Execution Cycle</h3>
-          <div class="space-y-4">
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-red-600">Mon</div>
-              <p class="text-sm text-slate-600">Review insights, adjust approach and report truth to CCO.</p>
-            </div>
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-blue-600">Mon-Tue</div>
-              <p class="text-sm text-slate-600">Prepare content and align internally before deployment.</p>
-            </div>
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-emerald-600">Wed-Fri</div>
-              <p class="text-sm text-slate-600">On-site deployment: one training and one coaching session per club per week.</p>
-            </div>
-          </div>
+          <h3 class="font-extrabold text-slate-950 mb-4">Expected Outcome</h3>
+          <ul class="text-sm text-slate-600 space-y-3">
+            <li><strong>Better conversion:</strong> Same product story and pricing discipline across clubs.</li>
+            <li><strong>Higher PT penetration:</strong> Better handover from membership to PT ecosystem.</li>
+            <li><strong>Lower discount leakage:</strong> Stronger control on offer, package and SKU logic.</li>
+          </ul>
         </div>
 
         <div class="rounded-2xl border border-red-200 bg-red-50 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">KPIs & Enforcement</h3>
+          <h3 class="font-extrabold text-slate-950 mb-4">Control Mechanism</h3>
           <ul class="text-sm text-slate-700 space-y-3">
-            <li><strong>Primary KPIs:</strong> Conversion rate, PT penetration and discount reduction.</li>
-            <li><strong>Lock Strategy:</strong> Premium packages become single SKU. Embedded benefits cannot be split.</li>
-            <li><strong>Discipline:</strong> First offense = 50% income cut. Second offense = termination.</li>
-            <li><strong>Manager Accountability:</strong> 5,000,000 VND penalty for failure to control team compliance.</li>
+            <li><strong>Single SKU rule:</strong> Embedded benefits cannot be split and sold separately.</li>
+            <li><strong>Audit:</strong> Random checks on online quotation, club posting and customer offer.</li>
+            <li><strong>Enforcement:</strong> First offense = 50% income cut. Second offense = termination.</li>
+            <li><strong>Manager accountability:</strong> 5,000,000 VND penalty if manager fails to control team compliance.</li>
           </ul>
         </div>
       </div>
     </section>
 
-
-    
-    <!-- NEW PROJECT PHASE 2 -->
-    <section id="phase2" class="card p-6 lg:p-8 mb-8">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
-        <div>
-          <p class="text-red-600 font-extrabold text-xs uppercase tracking-[0.25em] mb-2">New Project Phase 2</p>
-          <h2 class="text-2xl font-extrabold text-slate-950">Commercial Support Execution Arm</h2>
-          <p class="text-sm text-slate-500 mt-1">
-            From strategy at Head Office to consistent execution on the club floor.
-          </p>
-        </div>
-        <span class="badge status-risk">May 2026 Priority</span>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
-        <div class="bg-red-50 border border-red-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Pillar 1</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Convert</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Convert guests into members through clear sales flow, transparent pricing and consistent product explanation.
-          </p>
-        </div>
-
-        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Pillar 2</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Optimize</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Maximize member lifetime value by connecting members to PT, Supplements, Hypoxi and Vita services.
-          </p>
-        </div>
-
-        <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
-          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Pillar 3</p>
-          <h3 class="font-extrabold text-slate-950 mb-2">Retain & Renew</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Drive usage, results, proactive care, renewals and loyalty through member engagement.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Reality Check: Execution Gaps</h3>
-          <div class="space-y-4">
-            <div>
-              <p class="font-bold text-sm text-slate-900">Execution Inconsistency</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Club operations vary across 30+ clubs because execution depends too heavily on individual BM / BD / GM capability.
-              </p>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-slate-900">Price Re-engineering</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Unauthorized splitting of benefits, such as separating Sup cards from Master cards in premium packages, creates messy pricing and discount escalation.
-              </p>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-slate-900">Systemic Risk</p>
-              <p class="text-sm text-slate-600 mt-1">
-                Inconsistent pricing leads to unstable PT penetration, unpredictable revenue and lower brand trust.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="rounded-2xl border border-red-100 bg-red-50 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Strategic Solution</h3>
-          <p class="text-sm text-slate-700 leading-relaxed mb-4">
-            Commercial Support is not a paperwork support team. It is the execution arm that brings the right product, sales process and pricing logic directly to the club floor.
-          </p>
-          <div class="bg-white rounded-xl p-4 border border-red-100">
-            <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Mandate</p>
-            <p class="text-sm text-slate-700">
-              Identify clubs doing it right and scale them. Detect clubs that are failing or faking compliance and correct them immediately.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Team Structure</h3>
-          <ul class="text-sm text-slate-600 space-y-3">
-            <li><strong>Training Lead:</strong> Product decks, sales scripts and role-play scenarios.</li>
-            <li><strong>On-club Deployment:</strong> Weekly training and coaching across assigned clubs.</li>
-            <li><strong>Process & Audit:</strong> Sales flow checklist, pricing compliance and random truth audits.</li>
-            <li><strong>Performance & Insight:</strong> Detect improving clubs and fake-risk clubs through data patterns.</li>
-          </ul>
-        </div>
-
-        <div class="rounded-2xl border border-slate-200 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">Weekly Execution Cycle</h3>
-          <div class="space-y-4">
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-red-600">Mon</div>
-              <p class="text-sm text-slate-600">Review insights, adjust approach and report truth to CCO.</p>
-            </div>
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-blue-600">Mon-Tue</div>
-              <p class="text-sm text-slate-600">Prepare content and align internally before deployment.</p>
-            </div>
-            <div class="flex gap-3">
-              <div class="w-14 text-xs font-extrabold text-emerald-600">Wed-Fri</div>
-              <p class="text-sm text-slate-600">On-site deployment: one training and one coaching session per club per week.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="rounded-2xl border border-red-200 bg-red-50 p-5">
-          <h3 class="font-extrabold text-slate-950 mb-4">KPIs & Enforcement</h3>
-          <ul class="text-sm text-slate-700 space-y-3">
-            <li><strong>Primary KPIs:</strong> Conversion rate, PT penetration and discount reduction.</li>
-            <li><strong>Lock Strategy:</strong> Premium packages become single SKU. Embedded benefits cannot be split.</li>
-            <li><strong>Discipline:</strong> First offense = 50% income cut. Second offense = termination.</li>
-            <li><strong>Manager Accountability:</strong> 5,000,000 VND penalty for failure to control team compliance.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-<!-- RISKS -->
+    <!-- RISKS -->
     <section id="risks" class="card p-6 lg:p-8 mb-8">
-      <h2 class="text-2xl font-extrabold text-slate-950 mb-5">Risks & Dependencies</h2>
+      <h2 class="text-2xl font-extrabold text-slate-950 mb-5">Risks & Decisions Needed</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <div class="border border-red-100 bg-red-50 rounded-2xl p-5">
           <span class="badge status-risk mb-3">Risk</span>
           <h3 class="font-extrabold mb-2">IT bottleneck</h3>
-          <p class="text-sm text-slate-600">Multiple streams depend on IT for system build, demo, bug fixing and UAT sign-off.</p>
+          <p class="text-sm text-slate-600">Too many projects depend on IT build, bug fixing and UAT sign-off.</p>
         </div>
 
         <div class="border border-amber-100 bg-amber-50 rounded-2xl p-5">
           <span class="badge status-build mb-3">Risk</span>
-          <h3 class="font-extrabold mb-2">UAT fatigue</h3>
-          <p class="text-sm text-slate-600">Many departments are required to test several projects in parallel.</p>
+          <h3 class="font-extrabold mb-2">Too many parallel streams</h3>
+          <p class="text-sm text-slate-600">Without clear priority, execution may become busy but not outcome-driven.</p>
         </div>
 
         <div class="border border-slate-200 bg-slate-50 rounded-2xl p-5">
-          <span class="badge status-wait mb-3">Dependency</span>
-          <h3 class="font-extrabold mb-2">DOIT / Domain</h3>
-          <p class="text-sm text-slate-600">E-commerce go-live requires documentation, domain readiness and official handover.</p>
+          <span class="badge status-wait mb-3">Decision</span>
+          <h3 class="font-extrabold mb-2">Launch scope</h3>
+          <p class="text-sm text-slate-600">BOD should confirm which streams must go live first and which can wait.</p>
         </div>
 
         <div class="border border-blue-100 bg-blue-50 rounded-2xl p-5">
-          <span class="badge status-uat mb-3">Dependency</span>
-          <h3 class="font-extrabold mb-2">MKT handover</h3>
-          <p class="text-sm text-slate-600">Loyalty and e-commerce both need final UX/UI and campaign preparation.</p>
+          <span class="badge status-uat mb-3">Decision</span>
+          <h3 class="font-extrabold mb-2">Ownership</h3>
+          <p class="text-sm text-slate-600">Each workstream needs one owner accountable for outcome, not only task completion.</p>
         </div>
       </div>
     </section>
@@ -666,32 +494,32 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="rounded-2xl border border-slate-200 p-5">
-          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Week 1</p>
-          <h3 class="font-extrabold mb-2">Lock the dashboard logic</h3>
+          <p class="text-xs font-extrabold text-red-600 uppercase mb-2">Focus 1</p>
+          <h3 class="font-extrabold mb-2">Lock outcome dashboard</h3>
           <ul class="text-sm text-slate-600 space-y-2">
-            <li>• Finalize guest journey metrics</li>
-            <li>• Confirm commercial dashboard data source</li>
-            <li>• Define weekly high-level reporting format</li>
+            <li>• Finalize KPI logic</li>
+            <li>• Confirm data owner</li>
+            <li>• Start weekly BOD summary format</li>
           </ul>
         </div>
 
         <div class="rounded-2xl border border-slate-200 p-5">
-          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Week 2-3</p>
-          <h3 class="font-extrabold mb-2">Close testing loops</h3>
+          <p class="text-xs font-extrabold text-blue-600 uppercase mb-2">Focus 2</p>
+          <h3 class="font-extrabold mb-2">Close critical UAT loops</h3>
           <ul class="text-sm text-slate-600 space-y-2">
-            <li>• Loyalty UAT issue closure</li>
-            <li>• Payment user test and bug fix</li>
-            <li>• E-commerce landing page retest</li>
+            <li>• Loyalty UAT closure</li>
+            <li>• Payment bug fix and retest</li>
+            <li>• E-commerce go-live readiness</li>
           </ul>
         </div>
 
         <div class="rounded-2xl border border-slate-200 p-5">
-          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Week 4</p>
-          <h3 class="font-extrabold mb-2">Prepare rollout readiness</h3>
+          <p class="text-xs font-extrabold text-emerald-600 uppercase mb-2">Focus 3</p>
+          <h3 class="font-extrabold mb-2">Deploy Phase 2 control</h3>
           <ul class="text-sm text-slate-600 space-y-2">
-            <li>• Service Call performance review</li>
-            <li>• PT reactivation process announcement</li>
-            <li>• MKT handover for loyalty / e-commerce</li>
+            <li>• Launch Commercial Support role</li>
+            <li>• Enforce pricing and SKU rules</li>
+            <li>• Report club compliance weekly</li>
           </ul>
         </div>
       </div>
@@ -700,7 +528,7 @@
     <!-- FOOTER -->
     <footer class="mt-10 pt-8 border-t border-slate-200 text-center">
       <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-        California Commercial Team | High Level Roadmap Update | Internal Use
+        California Commercial Team | BOD Summary Roadmap Update | Internal Use
       </p>
     </footer>
 
